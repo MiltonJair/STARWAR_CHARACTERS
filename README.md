@@ -8,6 +8,8 @@ Este proyecto extrae datos completos de Star Wars desde SWAPI, los transforma pa
 
 ## 🚀 Características
 
+> **¿Primera vez?** Revisa la [Guía de Inicio Rápido](docs/QUICKSTART.md) para comenzar en minutos.
+
 - Extracción completa de datos de 6 categorías de SWAPI:
   - Películas (Films)
   - Personajes (People)
