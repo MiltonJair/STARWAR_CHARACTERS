@@ -22,15 +22,15 @@ def calculate_age(birth_year: str, release_dates: List[int]) -> Union[int, str]:
         return 'unknown'
 
     try:
-        birth_year_int = int(birth_year)
+        numeric_birth_year = int(birth_year)
     except ValueError:
         # Handle special cases like '19BBY'
         return birth_year
 
     for release_date in release_dates:
-        if birth_year_int <= release_date:
-            return release_date - birth_year_int
-    return release_dates[-1] - birth_year_int
+        if numeric_birth_year <= release_date:
+            return release_date - numeric_birth_year
+    return release_dates[-1] - numeric_birth_year
 
 
 def segment_gender(gender: str) -> str:

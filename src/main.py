@@ -7,10 +7,10 @@ and exports it in both CSV and JSON formats for analysis.
 """
 
 import pandas as pd
-from src.config import CATEGORIES
-from src.api_client import get_all_swapi_data
-from src.transformers import transform_people_dataframe
-from src.exporters import save_dataframe_as_csv, export_swapi_category
+from .config import CATEGORIES
+from .api_client import get_all_swapi_data
+from .transformers import transform_people_dataframe
+from .exporters import save_dataframe_as_csv, export_swapi_category
 
 
 def main():

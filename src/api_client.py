@@ -21,6 +21,7 @@ def get_all_swapi_data(category: str) -> List[Dict[str, Any]]:
 
     while next_page:
         response = requests.get(next_page)
+        response.raise_for_status()  # Raise exception for bad status codes
         data = response.json()
         all_data.extend(data['results'])
         next_page = data['next']
@@ -40,6 +41,7 @@ def get_resource_name(url: str, name_key: str = 'name') -> str:
         The name of the resource
     """
     response = requests.get(url)
+    response.raise_for_status()  # Raise exception for bad status codes
     data = response.json()
     return data.get(name_key, 'Unknown')
 
